@@ -11,22 +11,28 @@
 
     <title>TODO LIST</title>
 </head>
+<style>
+    body {
+        background-color: rgb(128, 104, 104);
+    }
+</style>
 
 <body>
     <h1 class="fw-bold text-center mt-4">TODO LIST</h1>
     <div class="container">
-
-        <div class="mb-3">
-            <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">Add an item to the list.</div>
-        </div>
-        <div class="mb-3">
-            <label for="description" class="form-label">Description</label>
-            <textarea type="te" class="form-control" id="description"></textarea>
-        </div>
-        <button class="btn btn-primary" id="add">Add to list</button>
-        <button class="btn btn-primary" id="clear" onclick="clearStorage()">Clear list</button>
+        <form>
+            <div class="mb-3">
+                <label for="title" class="form-label fw-bold">Title</label>
+                <input required type="text" class="form-control" id="title" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text text-dark">Add an item to the list.</div>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label fw-bold">Description</label>
+                <textarea type="text" class="form-control" id="description" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="add">Add to list</button>
+            <button class="btn btn-primary" id="clear" onclick="clearStorage()">Clear list</button>
+        </form>
 
         <div id="items" class="mt-3">
             <h2>Your Items</h2>
